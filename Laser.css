@@ -1,0 +1,280 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a {
+  float: none;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  float: left;
+  color: rgb(56, 56, 56);
+  text-decoration: none;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+.container-item {
+  width: 90%;
+  max-width: 1100px;
+  margin: 120px auto 0 auto; /* отступ от navbar */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  gap: 40px;
+}
+
+
+h2 {
+  font-size: 30px;
+  margin-left: 130px;
+  margin-top: 50px;
+}
+
+.container {
+  margin-top: 50px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#photo {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+#photo.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.buy-item {
+  width: 40%;
+  flex: 1;
+  background-color: #edf2f27e;
+  border: 1px solid grey;
+  border-radius: 12px;
+  padding: 25px;
+}
+ 
+
+.buy-item h2 {
+  text-align: center;
+  margin-left: 0;
+}
+
+.buy-item a {
+  background-color: #10ffff7e;
+  padding: 20px 30%;
+  border-radius: 10px;
+  position: relative;
+  top: 50px;
+  left: 7%;
+  color: black;
+  text-decoration: none;
+}
+
+#buy1 {
+  position: relative;
+  top: 30px; 
+}
+
+.buy-item button,
+.buy-item p {
+  display: block;
+  margin-left: 5%;
+  font-size: 20px;
+  border: none;
+  background: none;
+}
+
+.item {
+  margin-top: 80px;
+  display: inline-block;
+  margin-left: 20px;
+  border-radius: 12px;
+  width: 25%;
+  height: fit-content;
+  color: black;
+  background-color: #fff;
+}
+
+
+
+.item img {
+  border-radius: 12px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+#buy, #buy1 {
+  background-color: white;
+  padding: 10px 30%;
+  border-radius: 10px;
+  color: black;
+  border: 1px solid grey;
+  text-decoration: none;
+  display: inline-block;
+}
+
+footer {
+  font-size: 20px;
+  background-color: rgb(52, 51, 51);
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 200px;
+  height: 250px;
+  padding-top: 40px;
+}
+
+/* Telefonlar :( */
+/* Z qivordi */
+
+@media ( max-width: 768px ) {
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .item{
+    display: inline-block;
+    width: 280px;
+  }
+
+  .item img {
+    width: 280px;
+    height: 350px;
+  }
+
+  #buy {
+    padding: 10px 70px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .container-item {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  #photo {
+    width: 200px;
+  }
+
+  .buy-item {
+    padding: 20px;
+  }
+ 
+  .container-item .buy-item h2 {
+    margin-top: 50px;
+  }
+
+  .container-item .buy-item h2 {
+    font-size: 22px;
+  }
+  .container-item .buy-item p, .container-item .buy-item button, .container-item .buy-item #buy1 {
+    font-size: 15px;
+  }
+}
+
+/* Planshetlar */
+/* Noutbuklarga yaqin ekan */
+
+@media (max-width: 992px) {
+  .container-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #photo {
+    width: 250px;
+    height: auto;
+  }
+
+  .buy-item {
+    width: 100%;
+  }
+  #buy {
+    padding: 10px 20px;
+  } 
+}
