@@ -4,11 +4,7 @@ function showPhoto(number) {
     photo.classList.remove("show");
 
     setTimeout(() => {
-        photo.src = "img" + number + ".png";
+        photo.src = "https://cdn.jsdelivr.net/gh/Fixsaid79/my-files/img" + number + ".png";
         photo.classList.add("show");
     }, 200);
-}
-
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
 }
